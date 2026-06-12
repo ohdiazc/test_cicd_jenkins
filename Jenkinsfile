@@ -22,7 +22,8 @@ pipeline {
         }
 	stage('Build') {
             steps {
-                echo 'Build'
+                echo 'Build' 
+		sh 'make'
             }
         }
 	stage('Delivery') {
