@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Test'
 		sh 'ls -lart'
-		sh 'helloworld' 	 	
+		sh './helloworld' 	 	
             }
         }
 	stage('Build') {
