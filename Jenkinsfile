@@ -35,7 +35,7 @@ pipeline {
         }
 	stage('Example') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with name ${env.JOB_NAME} on branch ${env.BRANCH_NAME}"
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with name ${env.JOB_NAME} on branch ${env.BRANCH_NAME}, executer ${env.EXECUTOR_NUMBER}"
             }
         }
     }
