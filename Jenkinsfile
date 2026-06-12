@@ -19,7 +19,8 @@ pipeline {
 	stage('Test') {
             steps {
                 echo 'Test'
-		sh 'ls -lart' 	
+		sh 'ls -lart'
+		sh 'helloworld' 	 	
             }
         }
 	stage('Build') {
@@ -33,6 +34,7 @@ pipeline {
             steps {
                 echo 'Delivery'
 		sh 'ls -lart' 	
+		archiveArtifacts artifacts: 'helloworld', fingerprint: true			
             }
         }
 	stage('Deploy') {
